@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://th.bing.com/th/id/R.25e1f585fcb95f1a9ed9d91bdb62ea15?rik=E%2f0ubp%2b%2bWe0PvA&pid=ImgRaw&r=0">
+    <title>OGELEAPESA</title>
+   <style>
+    body{
+       background-image: url(https://th.bing.com/th?id=OIP.yViNlVUb6nfSVlPNhnYyeQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2); 
+       margin: 100px;
+       padding: 100px;
+       font-size: larger;
+    }
+    fieldset{
+        background-color: gainsboro;
+    border-radius: 30px;
+    
+    }
+    input{
+       cursor: pointer;
+    } 
+        
+   </style>
+</head>
+<body> 
+<fieldset>
+        <script>
+            var seconds=0;
+            function displayseconds(){
+                seconds +=1;
+                document.getElementById("secondsdisplay").innerText ="Your time duration is  30 seconds "+seconds+" seconds...";
+            }
+            setInterval(displayseconds,1000);
+            function redirectpage(){
+                window.location = "http://127.0.0.1:5500/index.html"
+            }
+            setTimeout('redirectpage()',30000);
+        </script>
+    <div id="secondsdisplay"></div>
+    
+    <div class="container"></div>
+    <h1 id="counter">00:30</h1>
+    <!--javascript-->
+    <script type="text/javascript">
+    var minute = 0;
+    var second = 30;
+    setInterval( function(){
+if(minute == 0 && second == 1){
+document.getElementById("counter").innerHTML = "00:00";
+}else{
+second--;
+if( second == 0){
+    minute --;
+    second = 60;
+    if(minute == 0){
+        minute = minute;
+    }
+}
+if(minute.toString().length == 1){
+    minute = "0" + minute;
+}
+if(second.toString(). length == 1){
+    second = "0" + second;
+}
+document.getElementById("counter").innerHTML = minute + ":" + second;
+    }
+    }, 1000)
+
+           var password ="L";
+function passcheck(){
+    if(document.getElementById('pass1').value!=password){
+        alert('YOU LOOSE,TRY AGAIN');
+        return false;
+
+    }
+    if(document.getElementById('pass1').value==password){
+        alert('YOU HAVE WON,IT WAS YOUR LUCKY DAY.COLLECT 1000% OF THE AMOUNT YOU DEPOSITED WELCOME AGAIN.');
+        
+        
+    }
+}  
+        </script>
+
+
+       <form class ="passform" action="index.html" onsubmit="return passcheck()">
+        <b>FIND THE MISSING LETTER</b><br><br>
+        <input type="password" placeholder="2W8B_2L2EP"required id="pass1"></input>
+        <br><br>
+        <b>Choose one of the letters bellow:</b>
+        <h2>(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z)</h2>
+<input type="submit"></input>
+ 
+</form> 
+</fieldset>
+</body>
+</html>
